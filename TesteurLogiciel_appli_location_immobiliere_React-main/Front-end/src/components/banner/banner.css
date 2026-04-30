@@ -1,0 +1,38 @@
+.Banner {
+    border: solid 2px #ccc;
+    position: relative;
+    width: 1240px;
+    height: 223px;
+    border-radius: 25px;
+}
+
+.banner_background {
+
+}
+
+.banner_background::after {
+   
+}
+
+.banner_home {
+border-radius: 25px;
+opacity: 0.6;
+background: #000;
+mix-blend-mode: darken;
+}
+
+.Banner p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #ffffff;
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    text-shadow: 0 3px 14px rgba(0, 0, 0, 0.55);
+}

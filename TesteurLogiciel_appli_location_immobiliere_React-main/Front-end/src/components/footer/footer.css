@@ -1,0 +1,19 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+footer-logo {
+    display: block;
+    height: auto;
+}
+
+p {
+    color: white;
+    margin-top: 10px;
+}
