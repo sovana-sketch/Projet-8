@@ -3,18 +3,16 @@ import './App.css'
 import Header from './components/header/Header'
 import Home from './pages/home/Home'
 import Footer from './components/footer/Footer'
-import Cards from './components/cards/Cards'
-import Banner from './components/banner/Banner'
+import Property from './pages/property/Property'
 function App() {
   return (
     <>
       <Header />
-      <Banner />
+     
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/cards" element={<Cards />} />
-          {/* <Route path="/" element={<Home />} /> */}
+          <Route path="/property/:id" element={<Property />} />
         </Routes>
       </BrowserRouter>
       <Footer />
