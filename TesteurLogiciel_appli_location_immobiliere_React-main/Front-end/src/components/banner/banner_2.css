@@ -4,7 +4,6 @@
     height: 223px;
     border-radius: 25px;
     margin: 0 auto;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .banner_background {}
@@ -16,9 +15,7 @@
     height: 223px;
     object-fit: cover;
     border-radius: 25px;
-    opacity: 0.6;
-    background: #000;
-    mix-blend-mode: darken;
+    opacity: 1;
 }
 
 .Banner p {
