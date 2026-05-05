@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './collapse.css'
 
-export default function Collapse({ title = 'Titre', isOpen = false, content = 'Contenu' }) {
+export default function Collapse({ title = 'Titre', isOpen = false, content = '' }) {
   const [open, setOpen] = useState(isOpen)
 
   return (
