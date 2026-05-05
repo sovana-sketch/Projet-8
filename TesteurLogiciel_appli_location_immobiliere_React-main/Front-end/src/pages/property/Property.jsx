@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import './Property.css'
+import './property.css'
 import Slider from '../../components/slider/Slider'
 import Collapse from '../../components/top-bars/Collapse'
 import TagList from '../../components/tag-list/TagList'
@@ -45,14 +45,23 @@ export default function Property() {
   return (
     <div className="property-page">
       <Slider pictures={property?.pictures || []} />
-      <h1 className="property-title">{property?.title || 'Titre non disponible'}</h1>
-      <p className="property-location">{property?.location || 'Localisation non disponible'}</p>
-      <TagList tags={property?.tags || []} />
-      <HostInfo host={property?.host} />
-      <Rating rating={property?.rating} />
-      <Collapse title="Description" content={property?.description || 'Aucune description disponible'} />
-      <Collapse title="Équipements" content={property?.equipments?.join(', ') || 'Aucun équipement listé'} />
-   
+      <div className="property-info">
+        <div className="property-info-left">
+          <h1 className="property-title">{property?.title || 'Titre non disponible'}</h1>
+          <p className="property-location">{property?.location || 'Localisation non disponible'}</p>
+        </div>
+        <div className="property-info-right">
+          <HostInfo host={property?.host} />
+        </div>
+      </div>
+      <div className="property-tags-rating">
+        <TagList tags={property?.tags || []} />
+        <Rating rating={property?.rating} />
+      </div>
+      <div className="property-collapses">
+        <Collapse key="description" title="Description" content={property?.description || 'Aucune description disponible'} />
+        <Collapse key="equipements" title="Équipements" content={property?.equipments?.join(', ') || 'Aucun équipement listé'} />
+      </div>
     </div>
   )
 }

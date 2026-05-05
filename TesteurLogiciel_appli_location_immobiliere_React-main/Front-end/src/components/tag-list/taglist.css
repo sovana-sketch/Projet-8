@@ -1,0 +1,14 @@
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tag {
+  background-color: #FF6060;
+  color: #fff;
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-size: 0.85rem;
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import './tagList.css'
+import './taglist.css'
 
 
 export default function TagList({ tags = [] }) {

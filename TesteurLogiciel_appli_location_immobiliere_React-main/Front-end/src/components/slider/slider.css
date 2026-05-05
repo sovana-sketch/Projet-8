@@ -1,11 +1,12 @@
 .slider {
   position: relative;
   width: 100%;
-  max-width: 100%;
+  max-width: 1200px;
   min-height: 320px;
-  border-radius: 10px;
+  border-radius: 25px;
   overflow: hidden;
-  background: #f5f5f5;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .slider-image {
@@ -19,23 +20,19 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
+  background: none;
   border: none;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.35);
   color: #fff;
-  font-size: 1.6rem;
+  font-weight: 400;
+  font-size: 200px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s ease;
+  
 }
 
-.slider-button:hover {
-  background: rgba(0, 0, 0, 0.6);
-}
+
 
 .slider-button--prev {
   left: 12px;
@@ -47,10 +44,9 @@
 
 .slider-counter {
   position: absolute;
-  right: 14px;
-  bottom: 14px;
-  padding: 6px 10px;
-  background: rgba(0, 0, 0, 0.5);
+  right: 50%;
+  transform: translateX(50%);
+  bottom: 25px;
   color: #fff;
   border-radius: 12px;
   font-size: 0.9rem;

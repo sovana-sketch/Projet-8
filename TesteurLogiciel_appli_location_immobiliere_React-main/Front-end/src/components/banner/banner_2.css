@@ -4,11 +4,9 @@
     height: 223px;
     border-radius: 25px;
     margin: 0 auto;
+
 }
 
-.banner_background {}
-
-.banner_background::after {}
 
 .banner_home {
     width: 100%;
