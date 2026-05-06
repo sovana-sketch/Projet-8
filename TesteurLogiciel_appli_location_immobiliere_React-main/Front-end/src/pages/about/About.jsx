@@ -1,12 +1,13 @@
 import React from 'react'
 import './About.css'
-import Banner_2 from '../../components/banner/Banner_2'
+import Banner from '../../components/banner/Banner'
+import bannerImage2 from '../../assets/Banner_2.png'
 import Collapse from '../../components/top-bars/Collapse'
 
 export default function About() {
     return (
         <div>
-            <Banner_2 />
+            <Banner image={bannerImage2} />
             <div className="about-content">
                 <Collapse
                     title="Fiabilité"

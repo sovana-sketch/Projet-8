@@ -3,20 +3,24 @@
     width: 100%;
     height: 223px;
     border-radius: 25px;
-    margin: 0 auto;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  
+    margin: 0 auto 43px;
 }
 
+.Banner--dark {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.Banner--dark .banner_home {
+    opacity: 0.6;
+    background: #000;
+    mix-blend-mode: darken;
+}
 
 .banner_home {
     width: 100%;
     height: 223px;
     object-fit: cover;
     border-radius: 25px;
-    opacity: 0.6;
-    background: #000;
-    mix-blend-mode: darken;
 }
 
 .Banner p {

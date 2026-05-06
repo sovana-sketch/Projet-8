@@ -5,6 +5,7 @@ import Home from './pages/home/Home'
 import Footer from './components/footer/Footer'
 import Property from './pages/property/Property'
 import About from './pages/about/About'
+import Error404 from './pages/error404/Error404'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/property/:id" element={<Property />} />
             <Route path="/about" element={<About />} />
+            <Route path="*" element={<Error404 />} />
           </Routes>
         </main>
         <Footer />
