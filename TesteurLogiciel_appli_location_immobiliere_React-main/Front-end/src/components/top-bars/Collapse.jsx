@@ -6,11 +6,11 @@ export default function Collapse({ title = 'Titre', isOpen = false, content = ''
 
   return (
     <div className="collapse">
-      <button className="collapse-header" onClick={() => setOpen(!open)}>
+      <button className={`collapse-header ${open ? 'open' : ''}`} onClick={() => setOpen(!open)}>
         <span>{title}</span>
         <span className={`collapse-icon ${open ? 'open' : ''}`}>›</span>
       </button>
-      {open && <div className="collapse-content">{content}</div>}
+      <div className={`collapse-content ${open ? 'open' : ''}`}>{content}</div>
     </div>
   )
 }

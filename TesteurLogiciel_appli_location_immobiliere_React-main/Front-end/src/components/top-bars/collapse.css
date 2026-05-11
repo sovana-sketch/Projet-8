@@ -16,7 +16,11 @@
   font-size: 1rem;
   color: #fff;
   font-weight: 500;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, border-radius 0.3s ease;
+}
+
+.collapse-header.open {
+  border-radius: 10px 10px 0 0;
 }
 
 
@@ -24,7 +28,7 @@
 .collapse-icon {
   font-size: 1.5rem;
   transform: rotate(270deg);
-  transition: transform 0.2s ease;
+  transition: transform 0.5s ease;
 }
 
 .collapse-icon.open {
@@ -32,7 +36,39 @@
 }
 
 .collapse-content {
-  padding: 12px;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 12px;
   background: #fff;
+  border-top: 0px solid #ddd;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              padding 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              border-top 0.5s ease;
+}
+
+.collapse-content.open {
+  max-height: 600px;
+  padding: 12px;
   border-top: 1px solid #ddd;
+}
+
+@media (max-width: 768px) {
+  .collapse-header {
+    font-size: 0.875rem;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .collapse-icon {
+    font-size: 1.25rem;
+  }
+
+  .collapse-content {
+    font-size: 0.875rem;
+    padding: 0 10px;
+  }
+
+  .collapse-content.open {
+    padding: 10px;
+  }
 }

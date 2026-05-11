@@ -34,3 +34,23 @@
 .header-button.active {
   border-bottom: 2px solid currentColor;
 }
+
+@media (max-width: 768px) {
+  .header-nav {
+    padding: 16px 20px;
+  }
+
+  .header-logo {
+    width: 145px;
+    height: auto;
+  }
+
+  .header-button {
+    font-size: 0.75rem;
+    padding: 6px 4px;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+}

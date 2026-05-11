@@ -3,6 +3,7 @@
     width: 100%;
     height: 223px;
     border-radius: 25px;
+    overflow: hidden;
     margin: 0 auto 43px;
 }
 
@@ -37,4 +38,21 @@
     font-weight: 700;
     line-height: 1.1;
     text-shadow: 0 3px 14px rgba(0, 0, 0, 0.55);
+}
+
+@media (max-width: 768px) {
+    .Banner {
+        height: 140px;
+        border-radius: 10px;
+        margin-bottom: 24px;
+    }
+
+    .banner_home {
+        height: 140px;
+        border-radius: 10px;
+    }
+
+    .Banner p {
+        font-size: 1.1rem;
+    }
 }

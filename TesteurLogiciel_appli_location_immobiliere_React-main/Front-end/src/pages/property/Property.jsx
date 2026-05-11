@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import './property.css'
 import Slider from '../../components/slider/Slider'
 import Collapse from '../../components/top-bars/Collapse'
@@ -7,39 +7,31 @@ import TagList from '../../components/tag-list/TagList'
 import Rating from '../../components/rating/Rating'
 import HostInfo from '../../components/host-info/HostInfo'
 
-
-
-
-
 export default function Property() {
   const { id } = useParams()
+  const navigate = useNavigate()
   const [property, setProperty] = useState(null)
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
 
   useEffect(() => {
     setLoading(true)
     fetch(`http://localhost:8080/api/properties/${id}`)
       .then(response => {
         if (!response.ok) {
-          throw new Error('Propriété introuvable')
+          navigate('/404')
+          return
         }
         return response.json()
       })
       .then(data => {
-        setProperty(data)
-        setError(null)
+        if (data) setProperty(data)
       })
-      .catch(err => setError(err.message))
+      .catch(() => navigate('/404'))
       .finally(() => setLoading(false))
-  }, [id])
+  }, [id, navigate])
 
   if (loading) {
     return <div className="property-loading">Chargement...</div>
-  }
-
-  if (error) {
-    return <div className="property-error">Erreur : {error}</div>
   }
 
   return (
